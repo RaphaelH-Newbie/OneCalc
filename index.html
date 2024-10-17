@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OneCalc</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="loginStyle.css" rel="stylesheet">
+</head>
+<body>
+    <div class="startContainer">
+        <div class="preload">
+            <box-icon name='math' ></box-icon>
+        </div>
+        <div class="loginNavbar">
+            <nav>
+                <a href="#"><box-icon name='math' color="darkred"></box-icon></a>
+                <a href="#"><p id="firstLogo">One</p></a>
+                <a href="#"><p id="secondLogo">Calc</p></a>
+            </nav>
+        </div>
+        <div class="navspacer" style="height: 50px;"></div>
+        <div class="loginContainer">
+            <div class="loginLabel">
+                <h1 id="LLh1-1">Satu kunci</h1>
+                <h1 id="LLh1-2">Untuk masalah matematika mu</h1>
+            </div>
+            <div class="loginForm">
+                <form action="">
+                    <input type="password" id="pswd" placeholder="Kunci" required>
+                    <p onclick="openPopup()">Belum punya kunci?</p>
+                    <button type="button" value="" onclick="checkPswd()">Masuk</button>
+                </form>
+                <div class="pricePopup" id="pricePopup">
+                    <div class="innerPP">
+                        <div class="labelPP-1">
+                            <h1>KUNCI</h1>
+                        </div>
+                        <div class="labelPP-2">
+                            <h3>Miliki akses ke kalkulator digital ini</h3>
+                            <h3>dengan harga</h3>
+                        </div>
+                        <p id="price1">$ 40.99 untuk Seumur Hidup</p>
+                        <p id="price2">$ 29.99 untuk Seumur Hidup</p>
+                        <p id="discountLabel">Diskon 70% hingga waktu terbatas</p>
+                        <div class="buttonPP"></div>
+                        <div class="konfirmasiPP">
+                            <button id="beli" onclick="changePS()">Beli Sekarang</button>
+                            <p id="tolakBeli" onclick="closePopup()">Tidak Terimakasih</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="succesPopup" id="succesPopup">
+                    <div class="innerSP">
+                        <div class="logoSP">
+                            <box-icon name='check-circle' type='solid' color="darkgreen"></box-icon>
+                        </div>
+                        <p style="font-size: larger; margin-top: 20px;">Transaksi Berhasil</p>
+                        <p>Kunci anda adalah </p>
+                        <p style="margin-top: 20px;">12345678</p>
+                        <div class="konfirmasiSP">
+                            <button type="button" onclick="closeSP()">Kembali</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+    <script src="preload.js"></script>
+    <script src="keysystem.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+html, body {
+    background-color: #eaeaea;
+    width: 100%;
+    height: 100%;
+}
+
+.startContainer {
+    width: 100%;
+    height: 100%;
+}
+
+/* Preload Style */
+
+.preload {
+    position: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease-in-out;
+    background-color: white;
+    z-index: 100;
+}
+
+.preload box-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.preload-end {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Login Navigation Bar Style */
+
+.loginNavbar {
+    min-width: 100%;
+    position: fixed;
+    max-height: 50px;
+    z-index: 10;
+}
+
+.loginNavbar nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    max-height: 50px;
+    min-width: 100%;
+    padding: 5px;
+}
+
+.loginNavbar nav a box-icon{
+    width: 30px;
+    height: 30px;
+    margin: 0px 10px 0px 0px;
+}
+
+.loginNavbar nav a{
+    text-decoration: none;
+    color: inherit;
+}
+
+#firstLogo {
+    margin: 0px 5px 0px 0px;
+    font-size: 20px;
+}
+
+#secondLogo {
+    font-size: 20px;
+    color: darkred;
+}
+
+@media screen and (max-width: 650px) {
+    #firstLogo, #secondLogo {
+        display: none;
+    }
+}
+
+/* Login Label */
+
+.loginContainer {
+    display: flex;
+    max-height: 100%;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.loginLabel {
+    margin: 40px 0px 40px 0px;
+    text-align: center;
+}
+
+.loginLabel h1 {
+    font-size: 40px;
+}
+
+#LLh1-1 {
+    color: darkred;
+}
+
+#LLh1-2 {
+    color: darkgoldenrod;
+}
+
+/* Login Form Style */
+
+.loginForm {
+    display: flex;
+    min-height: 100px;
+    min-width: 250px;
+    align-items: center;
+    justify-content: center;
+}
+
+.loginForm form {
+    display: flex;
+    min-height: 100px;
+    min-width: 250px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.loginForm input {
+    border-radius: 10px;
+    padding: 20px 20px 20px 20px;
+    width: 250px;
+    outline: none;
+    border: 1px solid darkred;
+    text-align: center;
+    background-color: #eaeaea;
+    font-size: 15px;
+}
+
+.loginForm form p {
+    align-self: flex-end;
+    color: darkred;
+    cursor: pointer;
+}
+
+.loginForm form p {
+    padding: 10px 0px 10px 0px;
+}
+
+.loginForm form button {
+    margin: 20px 0px 0px 0px;
+    padding: 15px 15px 15px 15px;
+    background-color: darkgoldenrod;
+    border: none;
+    border-radius: 20px;
+    width: 150px;
+    cursor: pointer;
+}
+
+.loginForm form button:active {
+    transform: scale(0.9);
+}
+
+/* Price Popup */
+
+.pricePopup {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    border: 1px solid darkolivegreen;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.open-PP {
+    visibility: visible;
+}
+
+.innerPP {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.innerPP .labelPP-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -30px;
+    background-color: darkkhaki;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border: 1px solid darkolivegreen;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: darkolivegreen;
+}
+
+.innerPP .labelPP-2 {
+    margin-top: 20px;
+    color: darkolivegreen;
+    text-align: center;
+}
+
+#price1 {
+    margin: 30px 0px 0px 0px;
+    font-size: 18px;
+    text-decoration: line-through;
+}
+
+#price2 {
+    margin: 5px 0px 0px 0px;
+    font-size: 22px;
+    color: darkred;
+}
+
+#discountLabel {
+    margin: 5px 0px 0px 0px;
+    color: darkred;
+}
+
+#beli {
+    padding: 13px 13px 13px 13px;
+    outline: none;
+    border-radius: 20px;
+    font-size: medium;
+    border: none;
+    background-color: darkgoldenrod;
+    cursor: pointer;
+}
+
+#beli:active {
+    transform: scale(0.90);
+}
+
+.konfirmasiPP {
+    margin: 13px 0px 0px 0px;
+    height: 150px;
+    width: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#tolakBeli {
+    margin: 10px 0px 0px 0px;
+    align-self: center;
+    text-decoration: none;
+    color: inherit;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+/* Succes Popup */
+
+.succesPopup {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background-color: #f5f5f5;
+    border-radius: 20px;
+    border: 1px solid darkolivegreen;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+}
+
+.open-SP {
+    visibility: visible;
+}
+
+.innerSP {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.innerSP .logoSP {
+    position: fixed;
+    margin: -200px 0px 0px 0px;
+}
+
+.innerSP .logoSP box-icon {
+    width: 100px;
+    height: 100px;
+}
+
+.innerSP p {
+    margin: 5px 0px 5px 0px;
+}
+
+.innerSP .konfirmasiSP {
+    margin: 20px 0px -70px 0px;
+}
+
+.innerSP .konfirmasiSP button {
+    padding: 13px 13px 13px 13px;
+    outline: none;
+    border-radius: 20px;
+    font-size: medium;
+    border: none;
+    background-color: darkgoldenrod;
+    cursor: pointer;
+}
+
+.innerSP .konfirmasiSP button:active {
+    transform: scale(0.9);
+}
+
+/* Breakpoint for Responsiveness */
+
+@media screen and (max-width: 650px) {
+    .loginForm form {
+        margin-top: 20px;
+        min-width: 167px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginForm {
+        margin-top: 20px;
+        min-width: 167px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginContainer .loginLabel h1 {
+        font-size: 26px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginContainer .loginLabel {
+        margin: 80px 0px 0px 0px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginForm input {
+        font-size: 10px;
+        padding: 15px 15px 15px 15px;
+        width: 167px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginForm form p {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .loginForm form button {
+        width: 100px;
+        padding: 10px 10px 10px 10px;
+        font-size: 10px;
+    }
+}
